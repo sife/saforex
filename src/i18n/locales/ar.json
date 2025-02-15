@@ -1,0 +1,97 @@
+{
+  "common": {
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "submit": "إرسال",
+    "logout": "تسجيل الخروج",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "تم بنجاح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "delete": "حذف"
+  },
+  "home": {
+    "welcome": "مرحباً بكم في SA FOREX",
+    "home": "الرئيسية",
+    "tradingSignals": "توصيات",
+    "marketAnalysis": "تحليلات",
+    "economicCalendar": "التقويم",
+    "subtitle": "منصتك الموثوقة لإشارات تداول الفوركس والتحليل السوقي",
+    "latestSignals": "أحدث التوصيات",
+    "upcomingEvents": "الأحداث الاقتصادية القادمة"
+  },
+  "register": {
+    "fullName": "الاسم الكامل",
+    "username": "اسم المستخدم",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "submitting": "جاري التسجيل...",
+    "haveAccount": "لديك حساب بالفعل؟",
+    "loginNow": "سجل دخولك الآن",
+    "errors": {
+      "fullName.min": "الاسم يجب أن يكون أكثر من حرفين",
+      "username.min": "اسم المستخدم يجب أن يكون 4 أحرف على الأقل",
+      "username.pattern": "اسم المستخدم يجب أن يحتوي على أحرف إنجليزية وأرقام وشرطة سفلية فقط",
+      "email.invalid": "البريد الإلكتروني غير صالح",
+      "password.min": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
+      "confirmPassword.min": "تأكيد كلمة المرور يجب أن يكون 6 أحرف على الأقل",
+      "password.mismatch": "كلمة المرور غير متطابقة",
+      "usernameTaken": "اسم المستخدم مستخدم بالفعل",
+      "emailTaken": "البريد الإلكتروني مستخدم بالفعل",
+      "profile": "حدث خطأ أثناء إنشاء الملف الشخصي",
+      "general": "حدث خطأ أثناء التسجيل"
+    }
+  },
+  "profile": {
+    "personalInfo": "حسابي",
+    "tradingExperience": "خبرة التداول",
+    "settings": "الإعدادات",
+    "fullName": "الاسم الكامل",
+    "country": "الدولة",
+    "bio": "نبذة شخصية",
+    "experienceLevel": "مستوى الخبرة",
+    "preferredMarkets": "الأسواق المفضلة",
+    "updateProfile": "تحديث الملف الشخصي",
+    "levels": {
+      "beginner": "مبتدئ",
+      "intermediate": "متوسط",
+      "advanced": "متقدم",
+      "professional": "محترف"
+    }
+  },
+  "trading": {
+    "newSignal": "توصية جديدة",
+    "currencyPair": "زوج العملات",
+    "entryPrice": "سعر الدخول",
+    "stopLoss": "وقف الخسارة",
+    "takeProfit": "هدف الربح",
+    "riskRating": "مستوى المخاطرة",
+    "status": "الحالة",
+    "performance": "الأداء",
+    "history": "سجل التوصيات",
+    "analysis": "التحليل"
+  },
+  "calendar": {
+    "impact": {
+      "high": "تأثير مرتفع",
+      "medium": "تأثير متوسط",
+      "low": "تأثير منخفض"
+    },
+    "filter": "تصفية الأحداث",
+    "timeZone": "المنطقة الزمنية",
+    "upcoming": "الأحداث القادمة",
+    "past": "الأحداث السابقة"
+  },
+  "admin": {
+    "dashboard": "لوحة التحكم",
+    "users": "إدارة المستخدمين",
+    "content": "إدارة المحتوى",
+    "analytics": "التحليلات",
+    "reports": "التقارير",
+    "settings": "إعدادات النظام"
+  }
+}

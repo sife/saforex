@@ -1,0 +1,24 @@
+/* Custom styles for react-phone-number-input */
+.PhoneInput {
+  @apply relative;
+}
+
+.PhoneInputInput {
+  @apply block w-full py-2 px-3 pl-16 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent;
+}
+
+.PhoneInputCountry {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-1;
+}
+
+.PhoneInputCountrySelect {
+  @apply opacity-0 absolute top-0 left-0 w-full h-full cursor-pointer;
+}
+
+.PhoneInputCountryIcon {
+  @apply w-6 h-4 overflow-hidden rounded-sm;
+}
+
+.PhoneInputCountrySelectArrow {
+  @apply border-t-4 border-r-4 border-l-4 border-t-gray-400 dark:border-t-gray-500 border-r-transparent border-l-transparent ml-1;
+}

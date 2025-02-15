@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  
+  body {
+    @apply text-gray-900 dark:text-gray-100 transition-colors duration-200;
+  }
+}
+
+/* Custom Background Pattern */
+.bg-trading-pattern {
+  @apply bg-gray-50 dark:bg-gray-900;
+  background-image: 
+    linear-gradient(45deg, rgba(59, 130, 246, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(59, 130, 246, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(59, 130, 246, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(59, 130, 246, 0.03) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Gradient Overlay */
+.bg-trading-gradient {
+  @apply bg-white/95 dark:bg-gray-900/95;
+  position: relative;
+}
+
+.bg-trading-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  @apply bg-gradient-to-br from-blue-600/5 to-blue-800/5 dark:from-blue-400/5 dark:to-blue-600/5;
+  pointer-events: none;
+}
+
+/* Financial Icons Pattern */
+.bg-financial-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-financial-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 30-15 30L15 30z' fill='%232563eb' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Mobile Navigation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-nav-enter {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .ltr {
+  direction: ltr;
+}
+
+/* Fix Tailwind RTL issues */
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.15s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.15s ease-out;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Add safe area padding for iOS */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Better touch targets on mobile */
+@media (max-width: 640px) {
+  button, 
+  [role="button"],
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
+
+/* Improve spacing on mobile */
+.gap-responsive {
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.p-responsive {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Navigation hover effects */
+.nav-link {
+  position: relative;
+  @apply transition-colors duration-200;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  @apply bg-current;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Dark mode transitions */
+.dark * {
+  @apply transition-colors duration-200;
+}
+
+/* Dark mode image adjustments */
+.dark img {
+  @apply brightness-90 contrast-100;
+}
+
+/* Section headings */
+.section-heading {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mb-6;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-900/10 p-6;
+}
+
+/* Text styles */
+.text-body {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+.text-muted {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+/* Link styles */
+.link {
+  @apply text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300;
+}
+
+/* Post title styles */
+.post-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200;
+}
+
+/* Post content styles */
+.post-content {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+/* Post metadata styles */
+.post-meta {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+/* Card header styles */
+.card-header {
+  @apply text-lg font-semibold text-gray-900 dark:text-white mb-4;
+}
+
+/* Card content styles */
+.card-content {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+/* Form label styles */
+.form-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1;
+}
+
+/* Form input styles */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-colors duration-200;
+}
